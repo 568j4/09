@@ -10,14 +10,19 @@ int main(int argc, char *argv[]) {
 	int i;
 	int a[N_STUDENT]={1,2,3,4,5};
 	int b[N_STUDENT]={1,2,3,4,5};
+	int flag=0;
 	
-
-    if (a==b)
-      printf("array a and b are the same\n");
-    	
-	else 
-	  printf("array a and b are not the same\n");
-
+	for(i=0;i<N_STUDENT;i++)
+	{	
+       if (a[i]!=b[i])
+        {
+		    printf("array a and b are not the same\n"); 
+		    flag=1;
+		}
+    }
+    
+    if (flag==0)
+       printf("array a and b are the same\n");
     system("PAUSE");
 	return 0;
 }
